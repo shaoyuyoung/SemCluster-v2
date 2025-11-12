@@ -3,8 +3,13 @@ import random
 import metrics
 
 
-# view progress bar
+# View progress bar
 def view_bar(num, total):
+    """
+    Display a progress bar in the console
+    :param num: Current progress count
+    :param total: Total count to complete
+    """
     rate = float(num) / float(total)
     rate_num = int(rate * 100)
     r = '\r[%s%s] complete: %d%%, cnt: %d' % ("=" * rate_num, " " * (100 - rate_num), rate_num, num)
